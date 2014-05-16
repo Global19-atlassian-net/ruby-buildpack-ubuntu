@@ -22,4 +22,4 @@ WORKDIR /home/buildpack
 EXPOSE 5000
 
 # Default assemble/run scripts for this image
-ENV STI_SCRIPTS_URL https://raw.githubusercontent.com/openshift/ubuntu-buildpack/master/.sti/bin
+ENV STI_SCRIPTS_URL https://raw.githubusercontent.com/openshift/ruby-buildpack-ubuntu/master/.sti/bin
