@@ -18,7 +18,8 @@ RUN groupadd -r buildpack_app -g 433 && \
   mkdir -p /home/buildpack && chown buildpack_app:buildpack_app /home/buildpack
 
 ADD ./buildpack /usr/buildpack/
-ADD ./prepare /usr/bin/
-ADD ./run /usr/bin/
 WORKDIR /home/buildpack
 EXPOSE 5000
+
+# Default assemble/run scripts for this image
+ENV STI_SCRIPTS_URL https://raw.githubusercontent.com/openshift/ubuntu-buildpack/master/.sti/bin
